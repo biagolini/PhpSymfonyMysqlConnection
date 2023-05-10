@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}List of States{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <h1>List of States</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Abbreviation</th>
+                    <th>Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for state in states %}
+                    <tr>
+                        <td>{{ state.idTypeState }}</td>
+                        <td>{{ state.dsAbbreviation }}</td>
+                        <td>{{ state.dsType }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}
